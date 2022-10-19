@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.preferredHighContrastLightColorTheme": "Default High Contrast",
+    "screencastMode.mouseIndicatorColor": "#FF0001",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false
+}

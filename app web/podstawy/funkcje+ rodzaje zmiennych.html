@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dsad</title>
+</head>
+<body>
+    <script>
+      console.log("Witaj w konsoli")
+        function ShowInfo()
+        {
+            document.writeln("hello word");
+            document.writeln("<br>");
+        }
+       ShowInfo();
+       ShowInfo();
+       function GetParametr(parametr)
+       {
+        document.writeln(parametr);
+        document.writeln("br");
+       }
+        GetParametr("rg");
+       //deklaracja zmiennej 
+       let zmienna1 = 10;
+       var zmienna2=12;
+       zmienna3=3;
+       const niezmienna = 77;
+       function Printzmienne()
+       {
+            document.writeln("zmienna1 "+zmienna1+"<br>");
+            document.writeln("zmienna2 "+zmienna2+"<br>");
+            document.writeln("zmienna3 "+zmienna3+"<br>");
+
+       }
+       Printzmienne();
+       function FunckcjeZeZmiennymi()
+       {
+            var zm4=21;// jest tylko w funkcji
+            let zm5=55;// jest tylko w funkcji
+            zm6=22;//jest globalna 
+       }
+       FunckcjeZeZmiennymi();
+       //document.writeln("zm4"+zm4); // nie istnieja bo byly stworzone w funkcji jest tylko tam dostępna
+       //document.writeln("zm5"+zm5);
+       document.writeln("zm6  "+zm6);//dziala bo ten typ dziala nie tylko w funkci gdzie jest napisana 
+       function Wytlumacz()
+       {
+        if(true)
+        {
+            var zm7= 12;
+            let zm8=12213
+        }
+        document.writeln("zm 7 "+zm7+"<br>");
+        
+        //document.writeln("zm 8 "+zm8+"<br>");//nie działa bo nie jest zadeklarowana bo jest w if
+        //zawsze stosowac let
+        
+       }
+       Wytlumacz();
+   function FunkcjaPentlowa()
+       {
+        
+         for( i = 0; i<10; i++ )
+         {
+            document.writeln(i);
+            document.writeln("<br/>");
+         }
+         document.writeln(i);// da sie ją tu wydrukowac bo nie jest to ani var 
+       }
+        FunkcjaPentlowa();
+        
+    </script> 
+</body>
+</html>
