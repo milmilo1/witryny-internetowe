@@ -18,7 +18,7 @@
        function GetParametr(parametr)
        {
         document.writeln(parametr);
-        document.writeln("br");
+        document.writeln("<br>");
        }
         GetParametr("rg");
        //deklaracja zmiennej 
@@ -69,7 +69,27 @@
          document.writeln(i);// da sie ją tu wydrukowac bo nie jest to ani var 
        }
         FunkcjaPentlowa();
-        
+        function FunkcjaDwaParametry(parametr,parametr2)
+       {
+        document.writeln(parametr);
+        document.writeln("<br>");
+        document.writeln(parametr2);
+        document.writeln("<br>");
+       }
+       FunkcjaDwaParametry("Ala ma kota ", 694202137);
+       //FunkcjaDwaParametry("Republika Konga");// zamiast 2 jest undefined  w pythonie nie trzeba podawac parametrów
+       
+       function Suma ( liczapierwsza , liczbadruga)
+       {
+        var wynik ;
+        wynik = liczapierwsza + liczbadruga;
+        return wynik;
+        }
+        var wynikFunkcji = Suma(27,12);
+        document.writeln(wynikFunkcji);
+        document.writeln("<br>")
+
+
     </script> 
 </body>
 </html>
