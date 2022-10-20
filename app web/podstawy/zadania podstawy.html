@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* zadanie 1 
+        napisz funkcje która wypisze liczby od 1 do 10
+        */
+       document.writeln( "zadanie 1"+"<br>" );
+        function WypiszJedendziesiec()
+        {
+            for(let i=1;i<11; i++ )
+            {
+                document.writeln(i);
+            }
+        }
+        WypiszJedendziesiec();
+        // napisz funkcje która  przyjmie liczbe i wyswietli info czy jest ona parzysta 
+        document.writeln( "<br>"+" zadanie 2"+"<br>" );
+        function CzyParzysta(liczba)
+        {
+            if (liczba%2)
+             {
+                document.write(" liczba nie parzysta"+"<br>");
+            }
+             else {
+                document.writeln("liczba parzysta"+"<br>");
+             }
+         
+        }
+        CzyParzysta(11)
+        // napisz funkcje która przyjmie 2 wartosci  i wyśle 
+        document.writeln( "zadanie 3"+"<br>" );
+        function CzyTakiesame(wartosc1,wartosc2)
+        {
+                if (wartosc1==wartosc2)
+                document.writeln("są równe"+"<br>");
+                else 
+                document.writeln("nie są równe"+"<br>");
+                if(wartosc1===wartosc2)
+                document.writeln("są identyczne( mają taki sam typ)");
+        }
+        CzyTakiesame(10,10)
+
+
+     //napisz funkcje która przyjmie licze  i wyswietli nazwe dnia tygodnia
+        document.writeln( "<br>"+"zadanie 4" +"<br>");
+        function tydzien(dzien)
+        {
+            switch(dzien)
+            {
+                case 7:
+                case 0: 
+                    document.writeln("niedziela") ;
+                    break;
+                case 1:
+                document.writeln("poniedzialek") ;
+                break;
+                case 2:
+                document.writeln("wtorek") ;
+                break;
+                case 3:
+                document.writeln("środa") ;
+                break;
+                case 4:
+                document.writeln("czwartek ") ;
+                break;
+                case 5:
+                document.writeln("piątek") ;
+                break;
+                case 6:
+                document.writeln("sobota") ;
+                break;
+       
+
+            }
+        }
+        tydzien(0)
+        //napisz funkcje które wyświetla tablicze mnożenia
+        function IloczynMnozenie()
+        {
+            czynnik1=-1;
+            czynnik2=0;
+            for (czynnik1=0; czynnik1==100;czynnik1++)
+            {
+                document.writeln(czynnik1);
+            }
+        }
+    </script>
+</body>
+</html>
