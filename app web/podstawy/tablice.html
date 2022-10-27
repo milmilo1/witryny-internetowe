@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tablica = [5];
+        tablica[0]=1;
+        tablica[1]=412412;
+        tablica[2]=21312;
+        tablica[3]=2;
+        tablica[4]=2;
+        for(let i=0; i<tablica.length;i++)
+        {
+            
+            document.writeln(tablica[i]+" tablica nr  "+i+"<br>");
+        }
+        function WyświetlZawartoscTablicy(tablica)
+        {
+            for(let i=0; i<tablica.length;i++)
+        {
+            document.writeln(tablica[i]+" tablica nr  "+i+"<br>");
+        }
+        }
+
+      document.writeln("*******"+"<br>"+"<br>")
+        WyświetlZawartoscTablicy(tablica);
+        function wyswietli(p1,p2)
+        {
+            document.writeln(p1);
+            document.write(p2);
+            document.writeln("wyświetl pratara");
+            for(let i=2; i<arguments.length;i++)//jesli po 2 dalo sie wiencej parametrów niz to drukujje je
+            {
+                document.writeln(arguments[i]+"<br>");
+            }
+            
+
+        }
+
+        document.writeln("*******"+"<br>"+"<br>")
+        wyswietli(12,"dasdf",false)
+
+        /*
+        Zadanie 
+        Napisz funkcje która jako parametr przyjmie tablice i wyswietli 
+        najwiekszą liczbe 
+        */
+       function JakiParametrNajwiekszy(tablica)
+       {
+         najwieksza=0
+        for(let i=0; i<tablica.length;i++)
+        {
+            if(tablica[i]>najwieksza)
+            {
+                najwieksza= tablica[i];
+            }
+        }
+        document.writeln(najwieksza)
+       }
+       JakiParametrNajwiekszy(tablica)
+       
+    </script>
+</body>
+</html>

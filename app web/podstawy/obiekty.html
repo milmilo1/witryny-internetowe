@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiekty.html</title>
+</head>
+<body>
+    <script>
+        //objekty typu string
+        let text= "ala ma kota";
+        document.write(text +"<br>" +" ma długosc " +text.length+"znaków"+"<br>");
+        let podtekst=text.substring(7,11);//drukuje od 7 do 11 znaku
+        document.write(podtekst+"<br>");
+        document.writeln(text[5] +"<br>");
+        
+                    //Obiekty typu Array
+                // Są to tablice
+
+                let tab1 = [];
+                let tab2 = new Array();
+                let tab3 = new Array(5);
+
+
+                tab1 = ["Ola", "Ala", "Ela"];
+                document.write("zawartość tablicy oryginalna:<br/>");
+                document.write(tab1.join() + "<br/>");
+                //join zwróci zawartość tablicy po przecinkach jako łańcuch znaków
+                tab1.sort();
+                //sortuje zawartość. BA!
+                document.write(tab1.join() + "<br/>");
+
+                tab1 = [5,1,12,8];
+                document.write(tab1.join() + "<br/>");
+                //join zwróci zawartość tablicy po przecinkach jako łańcuch znaków
+                tab1.sort();
+                //sortuje zawartość. BA!
+                document.write(tab1.join() + "<br/>");   
+                //w tym momencie sortuje jako łańcuch znaków - domyślnie
+
+                function PorownajLiczby(a, b)
+                {
+                    /*
+                        1 dla a > b
+                        0 dla a == b
+                        -1 dla a < b
+                    */
+
+                    if(a > b)
+                        return -1;
+                    if(a == b)
+                        return 0;
+                    if (a < b)
+                        return 1;
+                }
+                
+                function BubbleSort(tab)
+                {
+                    for (let i = 0; i < tab.length - 1; i++)
+                        for(let j = 0; j < tab.length - 1; j++)
+                            if (tab[j] > tab[j+1])
+                            {
+                                let tmp = tab[j];
+                                tab[j] = tab[j+1];
+                                tab[j+1] = tmp;
+                            }
+                }
+                //funkcja bubble, to nie demon prędkości, są lepsze funkcje
+
+               /* function BubbleSort(tab, funkcjaPorównania)
+                {
+                    for (let i = 0; i < tab.length - 1; i++)
+                        for(let j = 0; j < tab.length - 1; j++)
+                            //if (tab[j] > tab[j+1])
+                            if(funkcjaPorównania(tab[j], tab[j+1]))
+                            {
+                                let tmp = tab[j];
+                                tab[j] = tab[j+1];
+                                tab[j+1] = tmp;
+                            }
+                }
+                Inna funckcja
+                */
+               
+
+            // obiekt typu date\\
+
+            let data = new Date();
+            document.writeln(data.toString()+"<br>");
+
+            document.write(data.toLocaleString()+"<br>");
+            document.write(data.toUTCString()+"<br>");
+
+            document.write("rok"+data.getFullYear()+"<br>");
+            document.write("miesiąc"+data.getMonth()+"<br>");
+            document.write("dzien tydofna"+data.getDay()+"<br>");
+             document.write("dzien miesiąc"+data.getDate()+"<br>");
+            document.write("minuta"+data.getMinutes()+"<br>");
+            document.write("godzina"+data.getHours()+"<br>");
+            document.write("sekunda"+data.getSeconds()+"<br>");
+/*napisz funkcje która wyswietli na stronie ifo 
+o czasie
+Dzisiaj jest:
+        Czwartek , 27 pazdziernik 2022 roku 
+        godzina:godzina:minuta:secunda
+        
+*/         
+            document.write("***********************************")
+            document.write("zadanie"+"<br>")
+            document.write("dzisija jest :"+"<br>")
+            function tydzien(dzien)
+        {
+            switch(dzien)
+            {
+                case 7:                  
+                    document.writeln("niedziela") ;
+                    break;
+                case 1:
+                document.writeln("poniedzialek") ;
+                break;
+                case 2:
+                document.writeln("wtorek") ;
+                break;
+                case 3:
+                document.writeln("środa") ;
+                break;
+                case 4:
+                document.writeln("czwartek ") ;
+                break;
+                case 5:
+                document.writeln("piątek") ;
+                break;
+                case 6:
+                document.writeln("sobota") ;
+                break;
+       
+
+            }
+        }
+        document.write(tydzien(data.getDay()) +data.getDate()            )
+
+
+    </script>
+</body>
+</html>
