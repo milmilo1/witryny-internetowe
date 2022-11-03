@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+       <script>
+        function ChangeText()
+        {
+            let elementNewText =document.getElementById("newText");
+            let elementToChange = document.getElementById("textToChange");
+           // elementToChange.innerHTML="ala ma kota";
+           elementToChange.innerHTML = elementNewText.value;
+
+
+        } 
+        
+    </script>
+
+    <div> Podaj tekst  do zmiennej </div>
+    <input type="text" id="newText"/> <br>
+
+    <input type="button"value = "wejsce" onclick="ChangeText">
+    <div id="textToChange">Pomień ten tekst</div>
+    <br>
+
+<script>
+    function ShowTime()
+    {
+       let date = new Date();
+       let hour =Fix(date.getHours());
+       let minute = Fix(date.getMinutes());
+       let sec = Fix(date.getSeconds())
+        
+        let time= hour + ":"+minute + ":" + sec;
+        document.getElementById("showTime").innerHTML = time;
+    }
+    function Fix(elementToFix){
+        if (elementToFix <10 )
+            return"0" +elementToFix;
+        return elementToFix;
+    }
+</script>
+    <input type="button" id="Godzina" value="Pokaż godzine" onclick="ShowTime()"/>
+    <div id="showTime"></div>
+</body>
+</html>
