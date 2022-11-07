@@ -18,7 +18,7 @@
 
 
         } 
-        
+
     </script>
 
     <div> Podaj tekst  do zmiennej </div>
@@ -38,6 +38,8 @@
         
         let time= hour + ":"+minute + ":" + sec;
         document.getElementById("showTime").innerHTML = time;
+        window.setInterval(ShowTime,1000);// odswierzanie  storny co sekunde
+
     }
     function Fix(elementToFix){
         if (elementToFix <10 )
